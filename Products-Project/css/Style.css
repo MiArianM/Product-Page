@@ -1,7 +1,9 @@
 @font-face {
     font-family: PoorStory;
     src: url(/PoorStory-Regular.ttf);
+    
   }
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -105,7 +107,6 @@
 	96% { top:0px; opacity:1; z-index:0; }
 	100%{ top:325px; opacity:0; z-index:0; }
 }
-
 @keyframes cycle {
 	0%  { top:0px; }
 	4%  { top:0px; }
@@ -803,11 +804,9 @@ ul {
 
 
 .ProductPage{
-  opacity: 0.611;
+  background-color: rgba(0,0,0,0.5);
   margin-top: 20px;
   box-shadow:1px 1px 5px rgba(0,0,0,0.6);
-  z-index: 1;
-  height: 100vh;
   background-color: #e6e3e3;
   width: 97%;
 }
@@ -821,7 +820,7 @@ input {
   border-radius: 50px;
   border: none;
   color: #90ccf4;
-  cursor: pointer;
+  cursor: text;
   font-size: 1.6em;
   transition: width 1s ease;
   
@@ -842,7 +841,10 @@ input {
   position: absolute;
   cursor: pointer;
 }
-
+#search-btn{
+  width: 70px;
+  margin: 2px;
+}
 .search-container p {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
@@ -857,6 +859,7 @@ input {
   
 }
 .search-container{
+  z-index: 1;
   margin: 10px;
   position: relative;
 }
@@ -991,4 +994,44 @@ inset 4px 4px 6px 0 rgba(158, 0, 92, 0.937);
 }
 #sc1{
   flex-basis: 53%;
+}
+.flexcontainer div {
+  z-index: 1;
+  border-radius: 30px;
+  padding: 20px;
+  overflow: hidden;
+}
+.flexcontainer{
+  margin-left: 160px;
+  display: flex;
+  margin-top: 30px;
+}
+.flexcontainer img{
+  cursor: pointer;
+  border-radius: 60px;
+}
+.flexcontainer p{
+  text-align: center;
+  font-size: 24px;
+}
+.flexcontainer div div {
+  margin: 20px;
+}
+.flexcontainer span{
+  margin-left: 40%;
+  font-size: 23px;
+}
+.fl{
+  margin-top: 0px;
+}
+.prohide{
+  display: none;
+}
+.allbutton{
+  background: rgba(255, 252, 51, 0.822);
+  color: #d35004;
+  box-shadow:  4px 4px 6px 0 rgba(225, 0, 245, 0.645),
+  -4px -4px 6px 0 rgb(216, 25, 0), 
+inset -4px -4px 6px 0 rgba(255, 0, 0, 0.892),
+inset 4px 4px 6px 0 rgba(158, 0, 92, 0.937);
 }
