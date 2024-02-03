@@ -1,3 +1,4 @@
+const Products = document.querySelectorAll(".flexcontainer div div");
 const searchBtn = document.getElementById("search-btn");
 const searchBtn2 = document.querySelector(".sci2");
 const search = document.getElementById("search");
@@ -6,6 +7,10 @@ const tip = document.getElementById("tip");
 const tip2 = document.getElementById("tip2");
 const searchcontainer = document.getElementsByClassName("search-container");
 const searchcontainer2 = document.getElementById("sc2");
+const techbutton = document.getElementById("tech");
+const allbutton = document.getElementById("all");
+const healthbutton = document.getElementById("health");
+const clothingbutton = document.getElementById("clothing");
 let i = 0;
 let j = 0;
 let message1 = "Find Your Product here . .";
@@ -13,7 +18,7 @@ let message2 = "Find Your Price here . .";
 let typeSpeed1 = 100;
 let typeSpeed2 = 100;
 searchBtn.addEventListener("click", () => {
-  search.style.width = "58%";
+  search.style.width = "80%";
   search.style.paddingLeft = "100px";
   search.style.cursor = "text";
   search.focus();
@@ -26,15 +31,15 @@ searchBtn2.addEventListener("click", () => {
   search2.focus();
   typeWriter2();
 });
-search.addEventListener("keydown", () => {
+search.addEventListener("keyup", (event) => {
   tip.style.visibility = "visible";
   tip.style.opacity = 1;
+  searchHandler(event);
   setInterval(() => {
     tip.style.opacity = 0;
   }, 4000);
 });
-
-search2.addEventListener("keydown", () => {
+search2.addEventListener("keyup", () => {
   tip2.style.visibility = "visible";
   tip2.style.opacity = 1;
   setInterval(() => {
@@ -57,3 +62,53 @@ function typeWriter2() {
     setTimeout(typeWriter2, typeSpeed2);
   }
 }
+function searchHandler(event) {
+  const UserInput = event.target.value.toLowerCase().trim();
+  Products.forEach((product) => {
+    const productname = product.children[1].innerText.toLowerCase();
+    if (productname.includes(UserInput)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+allbutton.addEventListener("click", () => {
+  Products.forEach((product) => {
+    product.style.display = "block";
+    product.parentElement.style.display = "block";
+  });
+});
+techbutton.addEventListener("click", () => {
+  Products.forEach((product) => {
+    const proparentclass = product.parentElement.className;
+    if (proparentclass == "Techproducts") {
+      product.style.display = "block";
+      product.parentElement.style.display = "flex";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+clothingbutton.addEventListener("click", () => {
+  Products.forEach((product) => {
+    const proparentclass = product.parentElement.className;
+    if (proparentclass == "Clothesproducts") {
+      product.style.display = "block";
+      product.parentElement.style.display = "flex";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+healthbutton.addEventListener("click", () => {
+  Products.forEach((product) => {
+    const proparentclass = product.parentElement.className;
+    if (proparentclass == "Healthproducts") {
+      product.style.display = "block";
+      product.parentElement.style.display = "flex";
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
