@@ -2,6 +2,7 @@
     font-family: PoorStory;
     src: url(/PoorStory-Regular.ttf);
   }
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
   @keyframes fill {
@@ -183,6 +184,15 @@
       border-radius: 50%;
     }
   
+  }
+  @keyframes grow {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.35);
+      opacity: 0;
+    }
   }
 * {
     
@@ -372,6 +382,7 @@ section {
   background: #e6e3e3;
   min-height: 100vh;
   overflow: hidden;
+  flex-direction: column;
 }
 .content {
   display: flex;
@@ -554,6 +565,7 @@ section {
     background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
 }
 .circles{
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -787,4 +799,196 @@ ul {
 .fa-brands{
         width: 21px;
 }
+     /*ProductPage-------------------*/
 
+
+.ProductPage{
+  opacity: 0.611;
+  margin-top: 20px;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.6);
+  z-index: 1;
+  height: 100vh;
+  background-color: #e6e3e3;
+  width: 97%;
+}
+    
+input {
+  font-family: Montserrat;
+  background: #c6ffee;
+  width: 40px;
+  height: 40px;
+  padding: 40px;
+  border-radius: 50px;
+  border: none;
+  color: #90ccf4;
+  cursor: pointer;
+  font-size: 1.6em;
+  transition: width 1s ease;
+  
+  &::placeholder {
+    color: rgb(217, 121, 255);
+  }
+  
+  &:focus { outline: none; }
+}
+
+.search-container i {
+  color: #90ccf4;
+  padding: 22px;
+  width: 50%;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0 0 0 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.search-container p {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-align: left;
+  margin-left: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2s;
+  width: 300px;
+  font-family: PoorStory ;
+  
+}
+.search-container{
+  margin: 10px;
+  position: relative;
+}
+.search-container:before {
+  content: "";
+  padding: 10px;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border: 3px solid white;
+  position: absolute;
+  animation: grow 1s infinite;
+}
+
+
+.frame {
+  width: 100%;
+  text-align: left;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(5, 19, 66, 0.568),
+   7px 7px 20px 0px rgba(0,0,0,.6),
+   4px 4px 5px 0px rgba(0,0,0,.5);
+  outline: none;
+}
+.btn-8 {
+  background-color: #f6ecfc;
+background-image: linear-gradient(315deg, #629ae4 0%, #f863fd 84%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-8 span {
+  font-size: 30px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-8:before,
+.btn-8:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #6000aa;
+  box-shadow:  4px 4px 6px 0 rgba(199, 67, 181, 0.45),
+              -4px -4px 6px 0 rgba(0, 138, 41, 0.525), 
+    inset -4px -4px 6px 0 rgba(55, 255, 212, 0.45),
+    inset 4px 4px 6px 0 rgba(141, 175, 47, 0.525);
+  transition: all 0.5s ease;
+}
+.btn-8:before{
+   height: 0%;
+   width: 2px;
+}
+.btn-8:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-8:hover:before {
+  height: 100%;
+}
+.btn-8:hover:after {
+  width: 100%;
+}
+.btn-8:hover{
+  background: transparent;
+}
+.MOB:hover{
+  background: rgba(255, 252, 51, 0.822);
+}
+.MOB{
+  background-color: #f6ecfc;
+  background-image: linear-gradient(315deg, #e0dfdf 4%, #00cafd 88%);
+}
+.btn-8 span:hover{
+  color: #00ccff;
+}
+.MOB span:hover{
+  color: #d35004;
+}
+.MOB span:before,.MOB span:after{
+  background: rgb(252, 0, 0);
+  box-shadow:  4px 4px 6px 0 rgba(225, 0, 245, 0.645),
+  -4px -4px 6px 0 rgb(216, 25, 0), 
+inset -4px -4px 6px 0 rgba(255, 0, 0, 0.892),
+inset 4px 4px 6px 0 rgba(158, 0, 92, 0.937);
+}
+.btn-8 span:before,
+.btn-8 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgb(152, 0, 253);
+  transition: all 0.5s ease;
+}
+.btn-8 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-8 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-8 span:hover:before {
+  height: 100%;
+}
+.btn-8 span:hover:after {
+  width: 100%;
+}
+.Searchs{
+  display: flex;
+  width: 100%;
+
+}
+#sc1{
+  flex-basis: 53%;
+}
