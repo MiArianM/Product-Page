@@ -6,17 +6,34 @@ const search2 = document.querySelector(".scin2");
 const tip = document.getElementById("tip");
 const tip2 = document.getElementById("tip2");
 const searchcontainer = document.getElementsByClassName("search-container");
+const searchcontainer1 = document.getElementById("sc1");
 const searchcontainer2 = document.getElementById("sc2");
 const techbutton = document.getElementById("tech");
 const allbutton = document.getElementById("all");
 const healthbutton = document.getElementById("health");
 const clothingbutton = document.getElementById("clothing");
+let Gendma = document.getElementById("Gendma").checked;
+let Gendmt = document.getElementById("Gendmt").checked;
+let Gendmc = document.getElementById("Gendmc").checked;
+let Gendmh = document.getElementById("Gendmh").checked;
+const buttons = [allbutton, techbutton, clothingbutton, healthbutton];
+Gendma = true;
+allbutton.classList.add("Allbutton");
 let i = 0;
 let j = 0;
 let message1 = "Find Your Product here . .";
 let message2 = "Find Your Price here . .";
 let typeSpeed1 = 100;
 let typeSpeed2 = 100;
+document.addEventListener("click", () => {
+  if (
+    sc1.classList.contains("Otherbutton") ||
+    sc1.classList.contains("Allbutton")
+  ) {
+    sc1.classList.remove("Otherbutton");
+    sc1.classList.remove("Allbutton");
+  }
+});
 searchBtn.addEventListener("click", () => {
   search.style.width = "80%";
   search.style.paddingLeft = "100px";
@@ -34,14 +51,15 @@ searchBtn2.addEventListener("click", () => {
 search.addEventListener("keyup", (event) => {
   tip.style.visibility = "visible";
   tip.style.opacity = 1;
-  searchHandler(event);
+  searchProdcutnameHandler(event);
   setInterval(() => {
     tip.style.opacity = 0;
   }, 4000);
 });
-search2.addEventListener("keyup", () => {
+search2.addEventListener("keyup", (event) => {
   tip2.style.visibility = "visible";
   tip2.style.opacity = 1;
+  searchPriceHandler(event);
   setInterval(() => {
     tip2.style.opacity = 0;
   }, 4000);
@@ -62,7 +80,7 @@ function typeWriter2() {
     setTimeout(typeWriter2, typeSpeed2);
   }
 }
-function searchHandler(event) {
+function searchProdcutnameHandler(event) {
   const UserInput = event.target.value.toLowerCase().trim();
   Products.forEach((product) => {
     const productname = product.children[1].innerText.toLowerCase();
@@ -73,13 +91,29 @@ function searchHandler(event) {
     }
   });
 }
-allbutton.addEventListener("click", () => {
+function searchPriceHandler(event) {
+  const UserInput = event.target.value.trim();
+  Products.forEach((product) => {
+    const productname = product.children[2].innerText;
+    if (isNaN(UserInput)) {
+      product.style.display = "none";
+    } else if (productname.includes(UserInput)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+allbutton.addEventListener("click", (event) => {
   Products.forEach((product) => {
     product.style.display = "block";
     product.parentElement.style.display = "block";
+    Gendma = true;
   });
+  radiohovering(event);
 });
-techbutton.addEventListener("click", () => {
+techbutton.addEventListener("click", (event) => {
+  Gendmt = true;
   Products.forEach((product) => {
     const proparentclass = product.parentElement.className;
     if (proparentclass == "Techproducts") {
@@ -89,8 +123,10 @@ techbutton.addEventListener("click", () => {
       product.style.display = "none";
     }
   });
+  radiohovering(event);
 });
-clothingbutton.addEventListener("click", () => {
+clothingbutton.addEventListener("click", (event) => {
+  Gendmc = true;
   Products.forEach((product) => {
     const proparentclass = product.parentElement.className;
     if (proparentclass == "Clothesproducts") {
@@ -100,9 +136,11 @@ clothingbutton.addEventListener("click", () => {
       product.style.display = "none";
     }
   });
+  radiohovering(event);
 });
-healthbutton.addEventListener("click", () => {
+healthbutton.addEventListener("click", (event) => {
   Products.forEach((product) => {
+    Gendmh = true;
     const proparentclass = product.parentElement.className;
     if (proparentclass == "Healthproducts") {
       product.style.display = "block";
@@ -111,4 +149,22 @@ healthbutton.addEventListener("click", () => {
       product.style.display = "none";
     }
   });
+  radiohovering(event);
 });
+
+const radiohovering = (ClickedDetail) => {
+  if (Gendma) {
+    buttons.forEach((button) => {
+      button.classList.remove("Otherbutton");
+    });
+    allbutton.classList.add("Allbutton");
+  }
+  if (ClickedDetail.target.offsetParent.classList.contains("MOB")) {
+    allbutton.classList.add("Allbutton");
+  } else {
+    buttons.forEach((button) => {
+      button.classList.remove("Allbutton", "Otherbutton");
+    });
+    ClickedDetail.target.offsetParent.classList.add("Otherbutton");
+  }
+};
