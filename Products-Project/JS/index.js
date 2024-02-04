@@ -111,6 +111,15 @@ healthbutton.addEventListener("click", (event) => {
   });
   radiohovering(event);
 });
+document.querySelectorAll(".lox").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
 function typeWriter1() {
   if (i < message1.length) {
     msg = search.getAttribute("placeholder") + message1.charAt(i);
