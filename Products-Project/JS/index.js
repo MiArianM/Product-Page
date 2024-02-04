@@ -64,46 +64,6 @@ search2.addEventListener("keyup", (event) => {
     tip2.style.opacity = 0;
   }, 4000);
 });
-function typeWriter1() {
-  if (i < message1.length) {
-    msg = search.getAttribute("placeholder") + message1.charAt(i);
-    search.setAttribute("placeholder", msg);
-    i++;
-    setTimeout(typeWriter1, typeSpeed1);
-  }
-}
-function typeWriter2() {
-  if (j < message2.length) {
-    msg = search2.getAttribute("placeholder") + message2.charAt(j);
-    search2.setAttribute("placeholder", msg);
-    j++;
-    setTimeout(typeWriter2, typeSpeed2);
-  }
-}
-function searchProdcutnameHandler(event) {
-  const UserInput = event.target.value.toLowerCase().trim();
-  Products.forEach((product) => {
-    const productname = product.children[1].innerText.toLowerCase();
-    if (productname.includes(UserInput)) {
-      product.style.display = "block";
-    } else {
-      product.style.display = "none";
-    }
-  });
-}
-function searchPriceHandler(event) {
-  const UserInput = event.target.value.trim();
-  Products.forEach((product) => {
-    const productname = product.children[2].innerText;
-    if (isNaN(UserInput)) {
-      product.style.display = "none";
-    } else if (productname.includes(UserInput)) {
-      product.style.display = "block";
-    } else {
-      product.style.display = "none";
-    }
-  });
-}
 allbutton.addEventListener("click", (event) => {
   Products.forEach((product) => {
     product.style.display = "block";
@@ -151,7 +111,46 @@ healthbutton.addEventListener("click", (event) => {
   });
   radiohovering(event);
 });
-
+function typeWriter1() {
+  if (i < message1.length) {
+    msg = search.getAttribute("placeholder") + message1.charAt(i);
+    search.setAttribute("placeholder", msg);
+    i++;
+    setTimeout(typeWriter1, typeSpeed1);
+  }
+}
+function typeWriter2() {
+  if (j < message2.length) {
+    msg = search2.getAttribute("placeholder") + message2.charAt(j);
+    search2.setAttribute("placeholder", msg);
+    j++;
+    setTimeout(typeWriter2, typeSpeed2);
+  }
+}
+function searchProdcutnameHandler(event) {
+  const UserInput = event.target.value.toLowerCase().trim();
+  Products.forEach((product) => {
+    const productname = product.children[1].innerText.toLowerCase();
+    if (productname.includes(UserInput)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+function searchPriceHandler(event) {
+  const UserInput = event.target.value.trim();
+  Products.forEach((product) => {
+    const productname = product.children[2].innerText;
+    if (isNaN(UserInput)) {
+      product.style.display = "none";
+    } else if (productname.includes(UserInput)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
 const radiohovering = (ClickedDetail) => {
   if (Gendma) {
     buttons.forEach((button) => {
