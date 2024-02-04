@@ -1027,11 +1027,20 @@ inset 4px 4px 6px 0 rgba(158, 0, 92, 0.937);
 .prohide{
   display: none;
 }
-.allbutton{
+.Allbutton{
   background: rgba(255, 252, 51, 0.822);
   color: #d35004;
   box-shadow:  4px 4px 6px 0 rgba(225, 0, 245, 0.645),
-  -4px -4px 6px 0 rgb(216, 25, 0), 
-inset -4px -4px 6px 0 rgba(255, 0, 0, 0.892),
+
 inset 4px 4px 6px 0 rgba(158, 0, 92, 0.937);
+}
+.Otherbutton{
+  background: rgba(124, 255, 152, 0.822);
+  color: #6c00c4;
+  box-shadow:  4px 4px 6px 0 rgba(19, 31, 83, 0.645),
+
+inset 4px 4px 6px 0 rgba(158, 0, 97, 0.937);
+}
+input[type="radio"]{
+display: none;
 }
