@@ -162,7 +162,6 @@ function searchProdcutnameHandler(event) {
 }
 function searchPriceHandler(event) {
   const UserInput = +event.target.nextElementSibling.value;
-  console.dir(UserInput);
   Products.forEach((product) => {
     const productprice = +product.children[2].innerText.split(" ")[0];
     if (isNaN(UserInput)) {
