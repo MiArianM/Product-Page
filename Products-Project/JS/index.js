@@ -1,3 +1,4 @@
+//Selecting Dom Elements
 const Products = document.querySelectorAll(".flexcontainer div div");
 const searchBtn = document.getElementById("search-btn");
 const searchBtn2 = document.querySelector(".sci2");
@@ -16,15 +17,19 @@ let Gendma = document.getElementById("Gendma").checked;
 let Gendmt = document.getElementById("Gendmt").checked;
 let Gendmc = document.getElementById("Gendmc").checked;
 let Gendmh = document.getElementById("Gendmh").checked;
+//Variables
 const buttons = [allbutton, techbutton, clothingbutton, healthbutton];
-Gendma = true;
-allbutton.classList.add("Allbutton");
 let i = 0;
 let j = 0;
 let message1 = "Find Your Product here . .";
 let message2 = "Find Your Price here . .";
 let typeSpeed1 = 100;
 let typeSpeed2 = 100;
+window.addEventListener("load", () => {
+  allbutton.classList.add("Allbutton");
+  Gendma = true;
+});
+// Clicking Category Buttons Has Been Debugged
 document.addEventListener("click", () => {
   if (
     sc1.classList.contains("Otherbutton") ||
@@ -34,19 +39,13 @@ document.addEventListener("click", () => {
     sc1.classList.remove("Allbutton");
   }
 });
+//SearchNameProducts
 searchBtn.addEventListener("click", () => {
   search.style.width = "80%";
   search.style.paddingLeft = "100px";
   search.style.cursor = "text";
   search.focus();
   typeWriter1();
-});
-searchBtn2.addEventListener("click", () => {
-  search2.style.width = "100%";
-  search2.style.paddingLeft = "100px";
-  search2.style.cursor = "text";
-  search2.focus();
-  typeWriter2();
 });
 search.addEventListener("keyup", (event) => {
   tip.style.visibility = "visible";
@@ -56,6 +55,14 @@ search.addEventListener("keyup", (event) => {
     tip.style.opacity = 0;
   }, 4000);
 });
+//SearchPriceProducts
+searchBtn2.addEventListener("click", () => {
+  search2.style.width = "100%";
+  search2.style.paddingLeft = "100px";
+  search2.style.cursor = "text";
+  search2.focus();
+  typeWriter2();
+});
 search2.addEventListener("keyup", (event) => {
   tip2.style.visibility = "visible";
   tip2.style.opacity = 1;
@@ -64,6 +71,7 @@ search2.addEventListener("keyup", (event) => {
     tip2.style.opacity = 0;
   }, 4000);
 });
+//Category Buttons
 allbutton.addEventListener("click", (event) => {
   Products.forEach((product) => {
     product.style.display = "block";
@@ -111,6 +119,7 @@ healthbutton.addEventListener("click", (event) => {
   });
   radiohovering(event);
 });
+//SmoothScrolling , When Click is happening on navbar Buttons
 document.querySelectorAll(".lox").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -120,6 +129,7 @@ document.querySelectorAll(".lox").forEach((anchor) => {
     });
   });
 });
+//openning search input f
 function typeWriter1() {
   if (i < message1.length) {
     msg = search.getAttribute("placeholder") + message1.charAt(i);
@@ -136,6 +146,7 @@ function typeWriter2() {
     setTimeout(typeWriter2, typeSpeed2);
   }
 }
+//Logic of searching input f
 function searchProdcutnameHandler(event) {
   const UserInput = event.target.value.toLowerCase().trim();
   Products.forEach((product) => {
@@ -160,6 +171,7 @@ function searchPriceHandler(event) {
     }
   });
 }
+//Logic Of selecting just one category button
 const radiohovering = (ClickedDetail) => {
   if (Gendma) {
     buttons.forEach((button) => {
