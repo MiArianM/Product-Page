@@ -4,287 +4,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product-Page</title>
+    <!-- Linking the Font Awesome library for icons -->
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+     <!-- Linking external CSS file -->
     <link href="/css/Style.css" rel="stylesheet" />
-    </head>
+</head>
 <body>
-    <!--NavBar----------------------------->
+    <!-- Container for the Head content -->
     <div class="container">
+        <!-- Dummy element For NavBar Decoration -->
         <div class="dizzy-gillespie"></div>
+        <!-- Navigation menu -->
         <nav>
             <ul>
                 <li><a class="lox" href="#lq1">Home</a></li>
                 <li><a class="lox" href="#lq2">Products</a></li>
                 <li><a class="lox" href="#lq4">Contact</a></li>
                 <li><a class="lox" href="#lq3">About</a></li>
-                
             </ul>
         </nav>
-            <div class="hover column">
-                <div>
-                  <figure><a href="#"><img  height="65px" src="/Images/-Mim.png" /></a></figure>
-                    <span>Shop it  Like it </span>
-                </div>
-        
+        <!-- Logo section -->
+        <div class="hover column">
+            <div>
+                <figure><a href="#"><img height="65px" src="/Images/-Mim.png" /></a></figure>
+                <span>Shop it Like it</span>
+            </div>
+        </div>
     </div>
-
-</div>
-    <!--HomePage----------------------------->
+    <!-- Main content section -->
     <section>
-        
+        <!--SlideBar Of Mid Page-->
         <div class="content">
-          <div class="info">
-            <h1 id="lq1">Welcome To My Little Shop !</h1><br />
-            <p>Here, You can Find some <span class="movie-night">Fantastic Products</span> within Good Quality and get some good materials from us. Every product will have a return guarantee from us. If you are satisfied with your purchase at the end, introduce us to your friends and acquaintances!</p>
-            <button class="btn">Buy Something !</button>
-          </div>
-          <div class="swiper">
-            <div id="slider" class="shadow">
-                <div id="mask">
-                <ul >
-                   <li id="first" class="firstanimation">
-                <a href="#">
-                <img width="450px" src="/Images/sweeper1.jpg" alt="Cougar"/>
-                </a>
-                <div class="tooltip">
-                <h1>PlayStation 5</h1>
-                </div>
-                </li>
-    
-                <li id="second" class="secondanimation">
-                <a href="#">
-                  <img  width="415px" src="/Images/sweeper2.jpg" alt="Lions"/>
-                </a>
-                <div class="tooltip">
-                <h1>HeadPhone</h1>
-                </div>
-                </li>
-                
-                <li id="third" class="thirdanimation">
-                <a href="#">
-                    <img width="415px" src="/Images/sweeper3.jpg" alt="Snowalker"/>
-                </a>
-                <div class="tooltip">
-                <h1>tv</h1>
-                </div>
-                </li>
-                            
-                <li id="fourth" class="fourthanimation">
-                <a href="#">
-                    <img height="416px" width="408px" src="/Images/sweeper4.jpg" alt="Howling"/>
-                </a>
-                <div class="tooltip">
-                <h1>Bag</h1>
-                </div>
-                </li>
-                            
-                <li id="fifth" class="fifthanimation">
-                <a href="#">
-                <img width="415" src="/Images/sweeper5.jpg" alt="Sunbathing"/>
-                </a>
-                <div class="tooltip">
-                <h1>Gloves</h1>
-                </div>
-                </li>
-                </ul>
-                </div>
-                <div class="progress-bar"></div>
+            <!-- Description section -->
+            <div class="info">
+                <h1 id="lq1">Welcome To My Little Shop!</h1><br />
+                <p>Here, you can find some <span class="movie-night">Fantastic Products</span> of good quality. We offer a return guarantee for every product. If you are satisfied with your purchase, please recommend us to your friends and acquaintances!</p>
+                <button class="btn">Buy Something!</button>
             </div>
-          
-            
-          </div>
+            <!-- SlideShow for showcasing products -->
+            <div class="swiper">
+                <!--SlideShow container with masked area-->
+                <div id="slider" class="shadow">
+                    <div id="mask">
+                        <!-- List of product images with tooltips -->
+                        <ul>
+                            <li id="first" class="firstanimation">
+                                <a href="#">
+                                    <img width="450px" src="/Images/sweeper1.jpg" alt="Cougar" />
+                                </a>
+                                <div class="tooltip">
+                                    <h1>PlayStation 5</h1>
+                                </div>
+                            </li>
+                            <li id="second" class="secondanimation">
+                                <a href="#">
+                                    <img width="415px" src="/Images/sweeper2.jpg" alt="Lions" />
+                                </a>
+                                <div class="tooltip">
+                                    <h1>HeadPhone</h1>
+                                </div>
+                            </li>
+                            <li id="third" class="thirdanimation">
+                                <a href="#">
+                                    <img width="415px" src="/Images/sweeper3.jpg" alt="Snowalker" />
+                                </a>
+                                <div class="tooltip">
+                                    <h1>TV</h1>
+                                </div>
+                            </li>
+                            <li id="fourth" class="fourthanimation">
+                                <a href="#">
+                                    <img height="416px" width="408px" src="/Images/sweeper4.jpg" alt="Howling" />
+                                </a>
+                                <div class="tooltip">
+                                    <h1>Bag</h1>
+                                </div>
+                            </li>
+                            <li id="fifth" class="fifthanimation">
+                                <a href="#">
+                                    <img width="415" src="/Images/sweeper5.jpg" alt="Sunbathing" />
+                                </a>
+                                <div class="tooltip">
+                                    <h1>Gloves</h1>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Progress bar for slider -->
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
         </div>
-      
-      </div>
-    <!--Product Section---------------------->
+        <!-- Product page section -->
         <div class="ProductPage">
+            <!-- Searching Section -->
             <div id="lq2" class="Searchs">
-            <div class="search-container " id = "sc1">
-                <i id="search-btn" class="fa fa-search fa-2x" aria-hidden="true"></i>
-                <input type="text" id="search" placeholder="" autocomplete="off">
-                <p id="tip">Hit enter to search</p>
-                <div class="frame">
-                    <input type = "radio" name = "rb" id = "Gendma"  value = "buta"/><button id = "all" class="custom-btn btn-8 MOB"><span>All</span></button>
-                    <input type = "radio" name = "rb" id = "Gendmt"  value = "butt"/><button id = "tech" class=" custom-btn btn-8"><span>Tech</span></button>
-                    <input type = "radio" name = "rb" id = "Gendmc"  value = "butc"/><button id = "clothing" class=" custom-btn btn-8"><span>Clothes</span></button>
-                    <input type = "radio" name = "rb" id = "Gendmh"  value = "buth"/><button id = "health" class=" custom-btn btn-8"><span>Health</span></button>
+                <!-- SearchProductName container with input, button, and filter options -->
+                <div class="search-container " id="sc1">
+                    <i id="search-btn" class="fa fa-search fa-2x" aria-hidden="true"></i>
+                    <input type="text" id="search" placeholder="" autocomplete="off">
+                    <p id="tip">Hit enter to search</p>
+                    <!-- Filter options -->
+                    <div class="frame">
+                        <!-- Radio buttons and buttons for filtering -->
+                        <input type="radio" name="rb" id="Gendma" value="buta" /><button id="all" class="custom-btn btn-8 MOB"><span>All</span></button>
+                        <input type="radio" name="rb" id="Gendmt" value="butt" /><button id="tech" class=" custom-btn btn-8"><span>Tech</span></button>
+                        <input type="radio" name="rb" id="Gendmc" value="butc" /><button id="clothing" class=" custom-btn btn-8"><span>Clothes</span></button>
+                        <input type="radio" name="rb" id="Gendmh" value="buth" /><button id="health" class=" custom-btn btn-8"><span>Health</span></button>
+                    </div>
                 </div>
-              </div>
-              <div class="search-container" id = "sc2" >
-                <i id="search-btn" class="fa fa-search fa-2x sci2" aria-hidden="true"></i>
-                <input class="scin2" type="text" id="search" placeholder="" autocomplete="off">
-                <p id = "tip2">Hit enter to search</p>
-                </div>
-            </div>
-        <div class="flexcontainer">
-            <div class="Techproducts">
-                <div >
-                    <img width="250px" src="/Images/p1.png" />
-                    <p>Apple Iphone 14 Pro</p>
-                    <span>1399$</span>
-                </div>
-                <div>
-                    <img width="250px" src="/Images/p2.jpeg" />
-                    <p>Microsoft Surface 3</p>
-                    <span>2400$</span>
-                </div>
-                <div>
-                    <img width="250px" src="/Images/p9.jpg" />
-                    <p>Smart Watch</p>
-                    <span>769$</span>
-                </div>
-                
-            </div>
-            <div class="Clothesproducts">
-                <div>
-                    <img width="250px" src="/Images/p7.jpg" />
-                    <p>White T-shirt</p>
-                    <span>299$</span>
-                </div>
-                <div>
-                    <img width="250px" src="/Images/p8.jpg" />
-                    <p>Black Hoody</p>
-                    <span>700$</span>
-                </div>
-                <div>
-                    <img width="250px" src="/Images/p10.jpg" />
-                    <p>Blue Pant</p>
-                    <span>869$</span>
+                <!-- SearchPriceName container with input, button, and filter options -->
+                <div class="search-container" id="sc2">
+                    <i id="search-btn" class="fa fa-search fa-2x sci2" aria-hidden="true"></i>
+                    <input class="scin2" type="text" id="search" placeholder="" autocomplete="off">
+                    <p id="tip2">Hit enter to search</p>
                 </div>
             </div>
-            <div class="Healthproducts">
-                <div>
-                    <img width="250px" src="/Images/p6.jpg" />
-                    <p>Tip-Top Pomad</p>
-                    <span>199$</span>
+            <!-- Section for displaying product categories -->
+            <div class="flexcontainer">
+                <!-- Divisions for each product category -->
+                <div class="Techproducts">
+                    <div>
+                        <img width="250px" src="/Images/p1.png" />
+                        <p>Apple iPhone 14 Pro</p>
+                        <span>1399$</span>
+                    </div>
+                    <div>
+                        <img width="250px" src="/Images/p2.jpeg" />
+                        <p>Microsoft Surface 3</p>
+                        <span>2400$</span>
+                    </div>
+                    <div>
+                        <img width="250px" src="/Images/p9.jpg" />
+                        <p>Smart Watch</p>
+                        <span>769$</span>
+                    </div>
                 </div>
-                <div>
-                    <img width="250px" src="/Images/p4.jfif" />
-                    <p>ReHair Conditionar</p>
-                    <span>328$</span>
+                <div class="Clothesproducts">
+                    <div>
+                        <img width="250px" src="/Images/p7.jpg" />
+                        <p>White T-shirt</p>
+                        <span>299$</span>
+                    </div>
+                    <div>
+                        <img width="250px" src="/Images/p8.jpg" />
+                        <p>Black Hoody</p>
+                        <span>700$</span>
+                    </div>
+                    <div>
+                        <img width="250px" src="/Images/p10.jpg" />
+                        <p>Blue Pant</p>
+                        <span>869$</span>
+                    </div>
                 </div>
-                <div>
-                    <img width="250px" src="/Images/p5.jfif" />
-                    <p>Healthy Lip</p>
-                    <span>49$</span>
+                <div class="Healthproducts">
+                    <div>
+                        <img width="250px" src="/Images/p6.jpg" />
+                        <p>Tip-Top Pomad</p>
+                        <span>199$</span>
+                    </div>
+                    <div>
+                        <img width="250px" src="/Images/p4.jfif" />
+                        <p>ReHair Conditioner</p>
+                        <span>328$</span>
+                    </div>
+                    <div>
+                        <img width="250px" src="/Images/p5.jfif" />
+                        <p>Healthy Lip</p>
+                        <span>49$</span>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+        <!--Decorative BackGround -->
         <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
-      <!--AboutPage-------------------------->
-      <div id="lq3" class="row">
-        <div class="containers col-lg-6 col-md-6">
-          
-          <div class="pic"></div>
-          
-          <div class="box1"></div>
-          <div class="box2"></div>
-          
-          <div class="social1">
-            <i class="fa fa-telegram" aria-hidden="true"></i> 
-          </div>
-          <div class="social2">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          </div>
-          <div class="social3">
-            <i class="fa fa-codepen" aria-hidden="true"></i>
-          </div>
+        <!-- About section -->
+        <div id="lq3" class="row">
+            <!-- Container for About SocialIcons and images -->
+            <div class="containers col-lg-6 col-md-6">
+                <div class="pic"></div>
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="social1">
+                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                </div>
+                <div class="social2">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+                <div class="social3">
+                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                </div>
+            </div>
+            <!-- Container for About Text -->
+            <div class="content2 col-md-offset-6 col-lg-offset-6">
+                <center><h1 class="contentHead">ABOUT ME</h1></center>
+                <h2>Hi Folks, <br/><br/>
+                    This is Arian as -Mim. I'm a frontend developer who is interested in learning new subjects, imagining ideas, and bringing them to life through code. I came up with this project concept, which consists of more than 1400 lines of code written in three languages: HTML, CSS, and JavaScript.<br/><br/>
+                    Hop out the coupe, chicken heads go crazy, gotta sound swag when the flow gets lazy!<br/><br/>
+                    Show me your love if you liked it.<br/><br/>
+                    <p><span id="spe">* No matter what people say, I always keep singing my own songs.</span></p>
+                </h2>
+            </div>
         </div>
-        
-        <div class="content2 col-md-offset-6 col-lg-offset-6">
-          <center><h1 class="contentHead">ABOUT ME</h1></center>
-          
-          <h2>Hi Folks, <br/><br/>
-            This is Arian as -Mim. I'm a Freakin frontend developer,who is intrested in learning new subjects,Imagining some ideas and creating them by putting Some Times ! Came up with this Porject concept of having More of 1400<sup>Lines</sup> of Codes with 3 Languages<sup>Html/CSS/JS</sup> For Sure.<br/><br/>
-            Hop out the coupe, chicken heads go crazy , Gotta sound swag when the flow get lazy !
-            <br/><br/>
-            Show Me your L<span>&hearts;</span>VE if you liked it.
-            <br/><br/>
-            <p><span id="spe">* No matter what people says, I always keep Singing My Own Songs.</span></p>
-          </h2>
-        </div>
-        </div> 
-      </section>
-
-    <!--Footer------------------------------->
+    </section>
+    <!-- Footer section -->
     <footer id="lq4" class="Mainfooter">
+            <!--Footer Bar-->
         <footer class="Onfooter">
             &copy;2024, All Rights Reserved by &nbsp;<i class="fa-brands fa-github fa-beat" style="color: #784ba0;"></i> &nbsp; <a href="https://github.com/MiArianM" class="namelink">-Mim</a>  
         </footer>
-		<div class="F-container F-row">
-			<div class="footer-col">
-				<h4>Contact Me</h4>
-				<ul>
-					<li><a id = "C" href="#">PhoneCall : +1 294 847 2634</a></li>
-					<li><a id = "C" href="#">Mail : Cod16Duty@gmail.com</a></li>
-					<li><a id = "C" href="#">351 Main Street, Anytown, USA 48296 </a></li>
-				</ul>
-			</div>
-			<div class="footer-col">
-				<h4>Shops</h4>
-				<ul>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">shipping</a></li>
-					<li><a href="#">returns</a></li>
-					<li><a href="#">order status</a></li>
-					<li><a href="#">payment options</a></li>
-				</ul>
-			</div>
-			<div class="footer-col">
-				<h4>Supports</h4>
-				<ul>
-					<li class="liFlexing">
+            <!--Whole Footer-->
+        <div class="F-container F-row">
+            <div class="footer-col">
+                <h4>Contact Me</h4>
+                <ul>
+                    <li><a id="C" href="#">Phone Call: +1 294 847 2634</a></li>
+                    <li><a id="C" href="#">Mail: Cod16Duty@gmail.com</a></li>
+                    <li><a id="C" href="#">351 Main Street, Anytown, USA 48296</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Shops</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Supports</h4>
+                <ul>
+                    <li class="liFlexing">
                         <img width="20px" src="/Images/discussion.png" />
-                        <a id = "C" href="#">Forum</a>
+                        <a id="C" href="#">Forum</a>
                     </li>
-					<li class="liFlexing">
+                    <li class="liFlexing">
                         <img width="20px" src="/Images/live-chat.png" />
-                        <a id = "C" href="#">LiveChat With Specialists</a>
-                        
+                        <a id="C" href="#">Live Chat With Specialists</a>
                     </li>
-				</ul>
-			</div>
-
-			<div class="footer-col">
-				<h4>follow us</h4>
-                    <ul id="Nomrg" class="example-1">
-                        <li class="icon-content"><a href="https://www.facebook.com/" aria-label="facebook" data-social="facebook">
-                            <i class="fa-brands fa-facebook-f">
-                            </i></a>
-                            <div class="tooltip">facebook</div>
-                            </li>
-                            <li class="icon-content"><a href="https://www.twitter.com/" aria-label="twitter" data-social="twitter">
-                                <i class="fa-brands fa-x-twitter">
-                                </i></a>
-                                <div id="twtool" class="tooltip">twitter</div>
-                                </li>
-                                <li class="icon-content"><a href="https://www.instagram.com/" aria-label="instagram" data-social="instagram">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    </i></a>
-                                    <div class="tooltip">instagram</div>
-                                    </li>
-                                    <li class="icon-content"><a href="https://www.linkedin.com/" aria-label="linkedin" data-social="linkedin">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                        </i></a>
-                                        <div class="tooltip">linkedin</div>
-                                        </li>
-                            </ul>
-				</div>
-			</div>
-		</div>
-	</footer>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul id="Nomrg" class="example-1">
+                    <li class="icon-content"><a href="https://www.facebook.com/" aria-label="facebook" data-social="facebook">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                        <div class="tooltip">Facebook</div>
+                    </li>
+                    <li class="icon-content"><a href="https://www.twitter.com/" aria-label="twitter" data-social="twitter">
+                        <i class="fa-brands fa-x-twitter"></i></a>
+                        <div id="twtool" class="tooltip">Twitter</div>
+                    </li>
+                    <li class="icon-content"><a href="https://www.instagram.com/" aria-label="instagram" data-social="instagram">
+                        <i class="fa-brands fa-instagram"></i></a>
+                        <div class="tooltip">Instagram</div>
+                    </li>
+                    <li class="icon-content"><a href="https://www.linkedin.com/" aria-label="linkedin" data-social="linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i></a>
+                        <div class="tooltip">LinkedIn</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript file for functionality -->
     <script src="/JS/index.js"></script>
 </body>
 </html>
