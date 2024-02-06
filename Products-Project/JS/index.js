@@ -56,17 +56,19 @@ search.addEventListener("keyup", (event) => {
   }, 4000);
 });
 //SearchPriceProducts
-searchBtn2.addEventListener("click", () => {
+searchBtn2.addEventListener("mouseenter", () => {
   search2.style.width = "100%";
   search2.style.paddingLeft = "100px";
   search2.style.cursor = "text";
   search2.focus();
   typeWriter2();
 });
-search2.addEventListener("keyup", (event) => {
+searchBtn2.addEventListener("click", (event) => {
+  searchPriceHandler(event);
+});
+search2.addEventListener("keyup", () => {
   tip2.style.visibility = "visible";
   tip2.style.opacity = 1;
-  searchPriceHandler(event);
   setInterval(() => {
     tip2.style.opacity = 0;
   }, 4000);
@@ -159,12 +161,13 @@ function searchProdcutnameHandler(event) {
   });
 }
 function searchPriceHandler(event) {
-  const UserInput = event.target.value.trim();
+  const UserInput = +event.target.nextElementSibling.value;
+  console.dir(UserInput);
   Products.forEach((product) => {
-    const productname = product.children[2].innerText;
+    const productprice = +product.children[2].innerText.split(" ")[0];
     if (isNaN(UserInput)) {
       product.style.display = "none";
-    } else if (productname.includes(UserInput)) {
+    } else if (productprice === UserInput) {
       product.style.display = "block";
     } else {
       product.style.display = "none";
