@@ -167,6 +167,8 @@ function searchPriceHandler(event) {
     const productprice = +product.children[2].innerText.split(" ")[0];
     if (isNaN(UserInput)) {
       product.style.display = "none";
+    } else if (UserInput === 0) {
+      product.style.display = "block";
     } else if (productprice === UserInput) {
       product.style.display = "block";
     } else {
