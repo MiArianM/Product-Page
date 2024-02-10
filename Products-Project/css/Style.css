@@ -4,16 +4,16 @@
 /* Font imports */
 @font-face {
     font-family: PoorStory;
-    src: url(/Fonts/PoorStory-Regular.ttf);
+    src: url(../Fonts/PoorStory-Regular.ttf);
     
 }
 @font-face {
   font-family: Dancing Script;
-  src: url(/Fonts/DancingScript-VariableFont_wght.ttf);
+  src: url(../Fonts/DancingScript-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: ptans;
-  src: url(/Fonts/PTSans-Italic.ttf);
+  src: url(../Fonts/PTSans-Italic.ttf);
 }
 /* Keyframes */
 @keyframes fill {
@@ -932,7 +932,7 @@ display: none;
   position: absolute;
   width: 750px;
   height: 650px;
-  background: url('/Images/photo_6195189574146308885_y.jpg') center center;
+  background: url('../Images/photo_6195189574146308885_y.jpg') center center;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -961,7 +961,7 @@ display: none;
   position: absolute;
   width: 580px;
   height: 600px;
-  background: url('/Images/photo_6195189574146308884_y.jpg') center center;
+  background: url('../Images/photo_6195189574146308884_y.jpg') center center;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -984,7 +984,7 @@ display: none;
   position: absolute;
   width: 680px;
   height: 724px;
-  background: url('/Images/data-1_1-p1e8ou4oqfb4fty5a7b62znpssea2yghhxd38fprc0.jpg');
+  background: url('../Images/data-1_1-p1e8ou4oqfb4fty5a7b62znpssea2yghhxd38fprc0.jpg');
   background-repeat: no-repeat;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
